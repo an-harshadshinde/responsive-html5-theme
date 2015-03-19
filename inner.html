@@ -1,237 +1,253 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Interior Designers</title>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/bootstrap-responsive.css" rel="stylesheet">
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap-dropdown.js"></script>
-  <script src="js/bootstrap-collapse.js"></script>
-  <script src="js/bootstrap-button.js"></script>
-  <script src="js/bootstrap-tab.js"></script>
-  
-  <script src="js/respond.min.js"></script>
-  <script src="js/respond.src.js"></script>
-  <script src="js/cufon.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" language="javascript"></script>
-  <script language="javascript">
-  $(document).ready(function() {
-    var timer=setInterval("getTime()",1000);
-  });
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Interior Designers</title>
+      <!--css link-->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/bootstrap-responsive.css" rel="stylesheet">
+      <!--End css links-->
+      <!--JS links-->
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap-dropdown.js"></script>
+      <script src="js/bootstrap-collapse.js"></script>
+      <script src="js/bootstrap-button.js"></script>
+      <script src="js/bootstrap-tab.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/respond.src.js"></script>
+      <script src="js/cufon.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" language="javascript"></script>
+      <!--End JS links-->
+      <script language="javascript">
+        //Analog clock javascript
+        $(document).ready(function() {
+          var timer=setInterval("getTime()",1000);
+        });
 
-  function getTime() {
-   var d = new Date();
-   var hours = d.getHours();
-   var minute = d.getMinutes();
-   var seconds = d.getSeconds();	
-   var hourRotate;
-   var minRotate;
-   var secRotate;
-   
-   hours = ((hours > 12) ? hours - 12 : hours);
-   if (minute === 0){
-     minRotate = 0;
-   }else{
-     minRotate = minute*6;
-   }
-   if (seconds === 0){
-     secRotate = 0;
-   }else{
-     secRotate = seconds*6;
-   }
-   if (hours === 12){
-     hourRotate = 0;
-   }else{
-     hourRotate = (hours*30) + (minute/2) ;
-     
-   }
-			 //document.write( hourRotate + ":" + minRotate +  ":" + secRotate);
-			 var srotate = "rotate(" + secRotate + "deg)";
-       $("#sechand").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
-       var hrotate = "rotate(" + hourRotate + "deg)";
-       $("#hourhand").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
-       var mrotate = "rotate(" + minRotate + "deg)";
-       $("#minhand").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
-     }
-     </script>
-     <script type="text/javascript">
+        function getTime() 
+        {
+          var d = new Date();
+          var hours = d.getHours();
+          var minute = d.getMinutes();
+          var seconds = d.getSeconds(); 
+          var hourRotate;
+          var minRotate;
+          var secRotate;
 
-     var _gaq = _gaq || [];
-     _gaq.push(['_setAccount', 'UA-1332079-8']);
-     _gaq.push(['_trackPageview']);
-
-     (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-    </script>
-
-
+          hours = ((hours > 12) ? hours - 12 : hours);
+          if (minute === 0){
+            minRotate = 0;
+          }else{
+            minRotate = minute*6;
+          }
+          if (seconds === 0){
+            secRotate = 0;
+          }else{
+            secRotate = seconds*6;
+          }
+          if (hours === 12){
+            hourRotate = 0;
+          }else{
+           hourRotate = (hours*30) + (minute/2) ;
+          }
+          //document.write( hourRotate + ":" + minRotate +  ":" + secRotate);
+          var srotate = "rotate(" + secRotate + "deg)";
+          $("#sechand").css({"-moz-transform" : srotate, "-webkit-transform" : srotate});
+          var hrotate = "rotate(" + hourRotate + "deg)";
+          $("#hourhand").css({"-moz-transform" : hrotate, "-webkit-transform" : hrotate});
+          var mrotate = "rotate(" + minRotate + "deg)";
+          $("#minhand").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
+        }
+      </script>
   </head>
-  <body onload="#clock">
-    <div class="container" >
+  <body>
+    <div class="container">
       <div class="row">
         <div class="span5">
           <div id="slideshow">
-            <img src="images/slideshow.png" />;
+            <!--Header image-->
+            <img src="images/slideshow.png" />
           </div>
         </div>
+        <!--Top Menu-->
         <div id="top-menu">
           <div class="span4">
             <div class="light">
-              <img src="images/light.png" /></div>
-              <div id="logo"><img src="images/logo.png" />
-              </div>
-
-              <div class="navbar">
-                <div class="navbar-inner">
-                 <div class="container">
+              <img src="images/light.png" />
+            </div>
+            <!--site logo-->
+            <div id="logo">
+              <img src="images/logo.png" />
+            </div>
+            <!--menu bar-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <!--menu toggle buttom display in small screens-->
                   <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                 </a>
-                 <div class="nav-collapse">
-                   <ul class="nav">
-                     <li ><a href="index.html">Home</a></li>
-                     <li class="active"><a href="inner.html">Interior</a></li>
-                     <li><a href="inner.html">Home Design</a></li>
-                     <li><a href="inner.html">Home And Decor</a></li>
-                     <li><a href="inner.html">Interior Designing</a></li>
-                     
-                     
-                     
-                     
-                   </ul>
-                 </div><!-- /.nav-collapse -->
-               </div>
-             </div><!-- /navbar-inner -->
-           </div>
-
-         </div>
-       </div>
-       <div class="span3">
-        <div id="watch"><div id="wrapper">
-          <div class="clock">
-           <div class="clockhighlight1">
-             <div class="clockface">
-               
-              <div id="hourhand"></div>
-              <div id="sechand"></div>
-              <div id="minhand"></div>
-              <div id="centerPoint"></div>
-            </div>
-          </div>
-        </div> </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span9">
-      <div class="inner-content-outer">
-        <div class="row">
-          <div class="span4">
-            <div class="post">
-              <div class="post-heading"><a href="#">Decorate Using Ethnic Interior Decor Elements</a></div>
-              <img src="images/inner_post1.jpg" />
-              <p>There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money. The great majority of people change their home decorating every year or thereabouts to keep it looking new and fresh. Some rugs are subject to fade in daylight. Changing the area rug in a room can be that little change that you will need for a tiny budget. There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money. </p><p class="node-readmore"><a href="#">Read more</a></p>
-            </div>
-          </div>
-          <div class="inner-post-sep span1"></div>
-          <div class="span4">
-            <div class="post">
-              <div class="post-heading"><a href="#">Changing The Area Rug In A Room Can Be That Tiny </a></div>
-              <img src="images/inner_post2.jpg" />
-              <p>There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money. The great majority of people change their home decorating every year or thereabouts to keep it looking new and fresh. Some rugs are subject to fade in daylight. Changing the area rug in a room can be that little change that you will need for a tiny budget. There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money.</p><p class="node-readmore"><a href="#">Read more</a></p>
-            </div>
-          </div>
-
-        </div></div></div>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <div class="nav-collapse">
+                  <ul class="nav">
+                    <!--Menu items-->
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="inner.html">Interior</a></li>
+                    <li><a href="inner.html">Home Design</a></li>
+                    <li><a href="inner.html">Home And Decor</a></li>
+                    <li><a href="inner.html">Interior Designing</a></li>
+                  </ul><!--End .nav-->
+                  </div><!--End .nav-collapse -->
+                </div><!--End .container -->
+              </div><!-- End .navbar-inner -->
+            </div><!--End navbar-->
+          </div><!--End .span4-->
+        </div><!--End Top Menu-->
+        <div class="span3">
+          <div id="watch">
+            <div id="wrapper">
+              <!--Analog Clock-->
+              <div class="clock">
+                <div class="clockhighlight1">
+                  <div class="clockface">
+                    <div id="hourhand"></div> <!--Hour Hand-->
+                    <div id="sechand"></div><!--second Hand-->
+                    <div id="minhand"></div><!--minute Hand-->
+                    <div id="centerPoint"></div><!--clock center point-->
+                  </div><!--End clockface-->
+                </div><!--End clockhighlight1-->
+              </div> <!--End clock-->
+            </div><!--End wrapper-->
+          </div><!--End watch-->
+        </div><!--End span3-->
+      </div><!--End row-->
+      <div class="row">
+        <div class="span9">
+          <div class="inner-content-outer">
+            <div class="row">
+              <div class="span4">
+                <div class="post">
+                  <div class="post-heading"><a href="#">Decorate Using Ethnic Interior Decor Elements</a></div>
+                  <img src="images/inner_post1.jpg" />
+                  <p>There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money. The great majority of people change their home decorating every year or thereabouts to keep it looking new and fresh. Some rugs are subject to fade in daylight. Changing the area rug in a room can be that little change that you will need for a tiny budget. There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money. </p><p class="node-readmore"><a href="#">Read more</a></p>
+                </div><!--End post-->
+              </div><!--End span4-->
+              <div class="inner-post-sep span1"></div>
+              <div class="span4">
+                <div class="post">
+                  <div class="post-heading"><a href="#">Changing The Area Rug In A Room Can Be That Tiny </a></div>
+                  <img src="images/inner_post2.jpg" />
+                  <p>There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money. The great majority of people change their home decorating every year or thereabouts to keep it looking new and fresh. Some rugs are subject to fade in daylight. Changing the area rug in a room can be that little change that you will need for a tiny budget. There are plenty of paths to change the outward appearance of your room without having to spend a flamboyant sum of money.</p><p class="node-readmore"><a href="#">Read more</a></p>
+                </div><!--End post-->
+              </div><!--End span4-->
+            </div><!--End row-->
+          </div><!--End inner-content-outer-->
+        </div><!--End span9-->
         <div class="span3">
           <div id="right-sidebar">
             <div class="block-outter">
               <div class="title">Popular Links</div>
               <div class="content"> 
-                <li><a href="#"><h6>Internal Design Careers</h6></a><p>Let's accept it, times are hard, an d it's during times like these </p></li>
-                <li><a href="#"><h6>Easy Home Remodeling</h6></a><p>Home is our personal space 
-                  where we feel safe and relaxed.</p></li>
-
-                  <li><a href="#"><h6>Ethnic Interior Decor Ele..</h6></a><p>Let's accept it, times are hard, an d it's during times like these </p></li>
-                </div></div>
-                <div class="block-outter">
-                  <img src="images/module.png" style="padding:8px;"/>
-                  <div class="content"> 
-
-                  </div>
-                </div>
+                <li>
+                  <a href="#">
+                    <h6>Internal Design Careers</h6>
+                  </a>
+                  <p>Let's accept it, times are hard, an d it's during times like these</p>
+                </li>
+                <li>
+                  <a href="#">
+                    <h6>Easy Home Remodeling</h6>
+                  </a>
+                  <p>Home is our personal space where we feel safe and relaxed.</p>
+                </li>
+                <li>
+                  <a href="#">
+                    <h6>Ethnic Interior Decor Ele..</h6>
+                  </a>
+                  <p>Let's accept it, times are hard, an d it's during times like these </p>
+                </li>
               </div>
             </div>
-
-
-          </div>
-          <div class="row">
-            <div id="bottom">
+            <div class="block-outter">
+              <img src="images/module.png" style="padding:8px;"/>
+              <div class="content"> 
+              </div>
+            </div><!--End block-outter-->
+          </div><!--End right-sidebar-->
+        </div><!--End span3-->
+      </div><!--End row-->
+      <div class="row">
+        <div id="bottom">
+          <div class="span3">
+            <div class="block-outter">
+              <div class="content"> 
+                <img src="images/custom1.jpg" />
+                <h6>Best Way Of Home Decoration</h6>
+                <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
+              </div><!--End content-->
+            </div><!--End block-outter-->
+          </div><!--End span3-->
+          <div class="span3">
+            <div class="block-outter">
+              <div class="content"> 
+                <img src="images/custom2.jpg" />
+                <h6>Decorate Using Ethnic Interior Decor Element</h6>
+                <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
+              </div><!--End content-->
+            </div><!--End block-outter-->
+          </div><!--End span3-->
+          <div class="span3">
+            <div class="block-outter">
+              <div class="content"> 
+                <img src="images/custom3.jpg" />
+                <h6>High Fashion Internal Decor</h6>
+                <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
+              </div><!--End content-->
+            </div><!--End block-outter-->
+          </div><!--End span3-->
+          <div class="span3">
+            <div class="block-outter">
+              <div class="content"> 
+                <img src="images/custom4.jpg" />
+                <h6>9 Tips For Budget Kitchen Decoration</h6>
+                <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
+              </div><!--End content-->
+            </div><!--End block-outter-->
+          </div><!--End span3-->
+        </div><!--End bottom-->
+      </div><!--End row-->
+      <div class="row">
+        <div class="span12">
+          <div class="footer">
+            <div class="row">
+              <div class="span8">
+                <div class="copyright">
+                  Copyright © 2015 <a href="#">Interior Designer</a>. All Rights Reserved
+                </div><!--end copyright-->
+              </div><!--end span8-->
               <div class="span3">
+                <div id="footer-menu">
+                  <a href="#">Home</a> | <a href="#">Sitemap</a> | <a href="#">Contact us</a> 
+                </div><!--end footer-menu-->
+              </div><!--end span3-->
+            </div><!--end row-->
+          </div><!--end footer-->
+        </div><!--end span12-->
+      </div><!--End row-->
+    </div><!--end container-->
+    <script type="text/javascript">
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'XX-XXXXXXX-X']);
+              _gaq.push(['_trackPageview']);
 
-                <div class="block-outter">
-                  <div class="content"> 
-                    <img src="images/custom1.jpg" />
-                    <h6>Best Way Of Home Decoration</h6>
-                    <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="span3">
-                <div class="block-outter">
-                  <div class="content"> 
-                    <img src="images/custom2.jpg" />
-                    <h6>Decorate Using Ethnic Interior Decor Element</h6>
-                    <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="span3">
-                <div class="block-outter">
-                  <div class="content"> 
-                    <img src="images/custom3.jpg" />
-                    <h6>High Fashion Internal Decor</h6>
-                    <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="span3">
-                <div class="block-outter">
-                  <div class="content"> 
-                    <img src="images/custom4.jpg" />
-                    <h6>9 Tips For Budget Kitchen Decoration</h6>
-                    <p>When purchasing rest room lights, it's a must for your decision to...</p><a href="#">more..</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span12">
-              <div class="footer">
-                <div class="row">
-                  <div class="span8">
-                    <div class="copyright">
-                      Copyright © 2012 <a href="#">Interior Designer</a>. All Rights Reserved
-                    </div>
-                  </div>
-                  <div class="span3">
-                    <div id="footer-menu">
-                      <a href="#">Home</a> | <a href="#">Sitemap</a> | <a href="#">Contact us</a> 
-                    </div></div></div>
-                  </div>
-                </div></div>
-              </div>
-            </body>
+              (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+    </script>
+  </body>
+</html>
